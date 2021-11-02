@@ -1,0 +1,27 @@
+﻿<Window x:Class="StudentManagement.AddCourse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentManagement"
+        mc:Ignorable="d"
+        WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource backgroundImage}"
+        Title="AddCourse" Width="200">
+    <Grid>
+        <StackPanel Name="spCourseForm" Margin="5,5,5,5">
+            <Label Content="Name*" HorizontalAlignment="Left"/>
+            <TextBox Text="{Binding Name}"/>
+            <Label Content="Description*" HorizontalAlignment="Left"/>
+            <TextBox
+                TextWrapping="Wrap"
+                Height="150"
+                Text="{Binding Description}"/>
+            <Label Content="* Required" HorizontalAlignment="Left"/>
+            
+            <Button Content="Save" Click="SaveCourse"/>
+            <Button Content="Cancel" Click="Cancel"/>
+        </StackPanel>
+    </Grid>
+</Window>

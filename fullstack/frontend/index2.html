@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+<html lang="en">
+    <head>
+        <script src="addresses.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adressen</title>
+    </head>
+    <body>
+        <h1>Adressen</h1>
+        
+        <table id="addresses"></table>
+
+        <form>
+
+            <label for="straatnaam">Straatnaam:</label>
+            <input type="text" name="straatnaam" id="newStreetName" />
+            <label for="huisnummer">Huisnummer:</label>
+            <input type="text" name="huisnummer" id="newHouseNumber" />
+            <label for="postcode">Postcode:</label>
+            <input type="text" name="postcode" id="newPostCode" />
+            <label for="woonplaats">Woonplaats:</label>
+            <input type="text" name="woonplaats" id="newCity" />
+            <button type="button" onclick="createAddress()">Opslaan</button></br>
+            <label for="updateID">ID:</label>
+            <input type="text" name="id" id="updateID" />
+            <button type="button" onclick="updateAddress()">Updaten</button>
+            <button type="button" onclick="deleteAddress()">Verwijderen</button>
+
+            <!-- <input type="text" name="search" id="searchValue" />
+            <button type="button" onclick="adresContains()">Zoek</button> -->
+
+        </form>
+    </body>
+</html>

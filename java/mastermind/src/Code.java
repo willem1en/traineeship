@@ -28,6 +28,7 @@ public class Code {
         Scanner reader = new Scanner(System.in);
         System.out.println("Enter four characters from a to f: ");
         String input = reader.next();
+        char inp = reader.next().charAt(0);
         testInput(input);
         // reader.close();
     }

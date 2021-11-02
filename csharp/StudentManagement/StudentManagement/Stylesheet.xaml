@@ -1,0 +1,69 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Colours -->
+    <SolidColorBrush x:Key="Darkish">#2a2b2b</SolidColorBrush>
+    <SolidColorBrush x:Key="Blackish">#0a1a1f</SolidColorBrush>
+    <SolidColorBrush x:Key="Lightish">#a5b1b5</SolidColorBrush>
+    <SolidColorBrush x:Key="Text">#db6627</SolidColorBrush>
+
+    <SolidColorBrush x:Key="1">#db6627</SolidColorBrush>
+    <SolidColorBrush x:Key="2">#3B6E67</SolidColorBrush>
+    <SolidColorBrush x:Key="3">#29324D</SolidColorBrush>
+    <SolidColorBrush x:Key="4">#3b0d4d</SolidColorBrush>
+    <SolidColorBrush x:Key="5">#87529c</SolidColorBrush>
+    <SolidColorBrush x:Key="6">#1f1324</SolidColorBrush>
+    <SolidColorBrush x:Key="7">#deafda</SolidColorBrush>
+
+
+    <!-- Grid -->
+    <Style TargetType="Grid">
+        <!--<Setter Property="Background" Value="{StaticResource Greyish}"/>-->
+    </Style>
+
+    <!-- Buttons -->
+    <Style TargetType="Button">
+        <Setter Property="Padding" Value="15,0,15,0"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="{StaticResource 5}"/>
+        <Setter Property="Foreground" Value="{StaticResource 6}"/>
+        <Setter Property="BorderThickness" Value="5,0,5,0"/>
+        <Setter Property="BorderBrush" Value="{StaticResource 4}"/>
+    </Style>
+
+    <!-- Labels -->
+    <Style TargetType="Label">
+        <Setter Property="Margin" Value="5"></Setter>
+        <Setter Property="Padding" Value="5,1,1,1"></Setter>
+        <Setter Property="Width" Value="80"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{StaticResource Lightish}"/>
+        <Setter Property="Foreground" Value="{StaticResource 6}"/>
+    </Style>
+
+
+    <!-- ############### Database management window ############### -->
+    
+    <!-- Background image -->
+
+    <ImageSource x:Key="imgSource">C:\Users\wille\Documents\traineeship\csharp\StudentManagement\BackgroundImage.png</ImageSource>
+    <ImageBrush x:Key="backgroundImage" TileMode="Tile" ViewportUnits="Absolute" Viewport="0,0,200,200" ImageSource="{StaticResource imgSource}" Opacity="1"></ImageBrush>
+
+
+    <!-- Buttons -->
+    <Style x:Key="BtnMainWindow" TargetType="Button">
+        <Setter Property="Padding" Value="15,15,15,15"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="{StaticResource 5}"/>
+        <Setter Property="Foreground" Value="{StaticResource 6}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderThickness" Value="5,0,5,0"/>
+        <Setter Property="BorderBrush" Value="{StaticResource 4}"/>
+    </Style>
+
+    <!-- DataGrid -->
+    <Style TargetType="DataGrid">
+        <Setter Property="GridLinesVisibility" Value="None"/>
+    </Style>
+
+</ResourceDictionary>

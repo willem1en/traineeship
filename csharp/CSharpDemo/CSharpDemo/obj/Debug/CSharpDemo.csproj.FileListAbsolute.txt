@@ -1,0 +1,10 @@
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\bin\Debug\CSharpDemo.exe.config
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\bin\Debug\CSharpDemo.exe
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\bin\Debug\CSharpDemo.pdb
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\obj\Debug\CSharpDemo.csproj.AssemblyReference.cache
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\obj\Debug\CSharpDemo.Form1.resources
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\obj\Debug\CSharpDemo.Properties.Resources.resources
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\obj\Debug\CSharpDemo.csproj.GenerateResource.cache
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\obj\Debug\CSharpDemo.csproj.CoreCompileInputs.cache
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\obj\Debug\CSharpDemo.exe
+C:\Users\wille\Documents\traineeship\csharp\CSharpDemo\CSharpDemo\obj\Debug\CSharpDemo.pdb

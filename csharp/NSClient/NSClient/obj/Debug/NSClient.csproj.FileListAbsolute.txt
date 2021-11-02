@@ -1,0 +1,12 @@
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\bin\Debug\NSClient.exe.config
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\bin\Debug\NSClient.exe
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\bin\Debug\NSClient.pdb
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\obj\Debug\NSClient.csproj.AssemblyReference.cache
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\obj\Debug\NSClient.Form1.resources
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\obj\Debug\NSClient.Properties.Resources.resources
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\obj\Debug\NSClient.csproj.GenerateResource.cache
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\obj\Debug\NSClient.csproj.CoreCompileInputs.cache
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\obj\Debug\NSClient.exe
+C:\Users\wille\Documents\traineeship\csharp\NSClient\NSClient\obj\Debug\NSClient.pdb

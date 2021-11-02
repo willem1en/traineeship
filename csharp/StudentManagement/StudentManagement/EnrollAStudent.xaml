@@ -1,0 +1,36 @@
+﻿<Window x:Class="StudentManagement.EnrollAStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentManagement"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        Background="{DynamicResource backgroundImage}"
+        Title="Manage enrollments" Height="400" Width="200">
+    <Grid>
+        <StackPanel Name="spStudentForm" Margin="5,5,5,5" Grid.ColumnSpan="2">
+            <Label
+                FontWeight="Bold"
+                Content="{Binding FirstName}"
+                ContentStringFormat="Student = {0}"
+                HorizontalAlignment="Left"
+                Width="100"/>
+
+
+            <Label Content="Enroll in course" HorizontalAlignment="Left" Width="100"/>
+            <ComboBox Name="cbxCourses"/>
+            <Button Content="Enroll" Click="EnrollStudent"/>
+
+            <Label Content="Enrollments" HorizontalAlignment="Left"/>
+            <ListBox Name="lbxEnrollments">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Unenroll from course" Click="UnenrollStudent"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>

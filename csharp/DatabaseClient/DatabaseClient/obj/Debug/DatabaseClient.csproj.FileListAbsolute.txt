@@ -1,0 +1,15 @@
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\bin\Debug\DatabaseClient.exe.config
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\bin\Debug\DatabaseClient.exe
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\bin\Debug\DatabaseClient.pdb
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\bin\Debug\EntityFramework.dll
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\bin\Debug\EntityFramework.xml
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\obj\Debug\DatabaseClient.csproj.AssemblyReference.cache
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\obj\Debug\DatabaseClient.Form1.resources
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\obj\Debug\DatabaseClient.Properties.Resources.resources
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\obj\Debug\DatabaseClient.csproj.GenerateResource.cache
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\obj\Debug\DatabaseClient.csproj.CoreCompileInputs.cache
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\obj\Debug\DatabaseClient.exe
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\obj\Debug\DatabaseClient.pdb
+C:\Users\wille\Documents\traineeship\csharp\DatabaseClient\DatabaseClient\obj\Debug\DatabaseClient.AddCategory.resources

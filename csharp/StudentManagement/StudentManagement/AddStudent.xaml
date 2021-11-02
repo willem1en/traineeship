@@ -1,0 +1,27 @@
+﻿<Window x:Class="StudentManagement.AddStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentManagement"
+        mc:Ignorable="d"
+        WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource backgroundImage}"
+        Title="Add student" Height="260" Width="250">
+    <Grid>
+        <StackPanel Name="spStudentForm" Margin="5,5,5,5">
+            <Label Content="First name*" HorizontalAlignment="Left"/>
+            <TextBox Text="{Binding FirstName}"/>
+            <Label Content="Last name*" HorizontalAlignment="Left"/>
+            <TextBox Text="{Binding LastName}"/>
+            <Label Content="Date of birth" HorizontalAlignment="Left"/>
+            <DatePicker SelectedDate="{Binding DateOfBirth}"/>
+            <Label Content="* Required" HorizontalAlignment="Left"/>
+
+            <Button Content="Save" Click="SaveStudent"/>
+            <Button Content="Cancel" Click="Cancel"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
