@@ -398,7 +398,7 @@ namespace SprintTrackerNew
             var row = (sender as Button).Parent as StackPanel;
             var tsk = row.Tag as Task;
 
-            VM.TaskList.Remove(tsk);
+            VM.DeleteTask(tsk);
             taskrows.Remove(row);
             if (VM.TaskList.Count == 0)
             {

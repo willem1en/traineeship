@@ -33,6 +33,11 @@ namespace SprintTrackerNew.MVVM.Model
         {
             var min = new TimeSpan(0, minutes, 0);
             EndTime = DateTime.Now.Subtract(min);
+
+            if (EndTime < StartTime)
+            {
+                EndTime = StartTime;
+            }
         }
 
         public TimeSpan GetTime()
