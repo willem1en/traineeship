@@ -10,7 +10,10 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Stylesheet.xaml">
+    <Page Update="Theme\Buttons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\Stylesheet.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

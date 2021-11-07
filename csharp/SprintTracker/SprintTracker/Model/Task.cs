@@ -36,6 +36,13 @@ namespace SprintTracker
             return ev;
         }
 
+        public LogEvent Start(int minutes)
+        {
+            var ev = Log.StartEvent(minutes);
+            Active = true;
+            return ev;
+        }
+
         public void Stop()
         {
             Log.StopEvent();

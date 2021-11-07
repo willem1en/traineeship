@@ -63,6 +63,16 @@ namespace SprintTracker
             ActiveEvent = tsk.Start();
         }
 
+        public void StartTask(Task tsk, int minutes)
+        {
+            if (ActiveEvent != null)
+            {
+                ActiveEvent.Stop(minutes);
+            }
+
+            ActiveEvent = tsk.Start(minutes);
+        }
+
         public void StopTask(Task tsk)
         {
             ActiveEvent = null;

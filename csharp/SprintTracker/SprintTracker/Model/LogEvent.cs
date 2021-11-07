@@ -17,9 +17,21 @@ namespace SprintTracker
             StartTime = DateTime.Now;
         }
 
+        public LogEvent(int minutes)
+        {
+            var min = new TimeSpan(0, minutes, 0);
+            StartTime = DateTime.Now.Subtract(min);
+        }
+
         public void Stop()
         {
             EndTime = DateTime.Now;
+        }
+
+        public void Stop(int minutes)
+        {
+            var min = new TimeSpan(0, minutes, 0);
+            EndTime = DateTime.Now.Subtract(min);
         }
 
         public TimeSpan GetTime()

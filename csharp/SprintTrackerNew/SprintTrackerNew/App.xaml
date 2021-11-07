@@ -1,0 +1,35 @@
+﻿<Application x:Class="SprintTrackerNew.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SprintTrackerNew"
+             StartupUri="MVVM/View/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                
+                <!-- Buttons -->
+                <ResourceDictionary Source="Theme/Buttons/CloseButton.xaml"/>
+                <ResourceDictionary Source="Theme/Buttons/DeleteButton.xaml"/>
+                <ResourceDictionary Source="Theme/Buttons/EditButton.xaml"/>
+                <ResourceDictionary Source="Theme/Buttons/FinishedButton.xaml"/>
+                <ResourceDictionary Source="Theme/Buttons/NewSprintButton.xaml"/>
+                <ResourceDictionary Source="Theme/Buttons/SaveButton.xaml"/>
+                <ResourceDictionary Source="Theme/Buttons/StartButton.xaml"/>
+                <ResourceDictionary Source="Theme/Buttons/StopButton.xaml"/>
+
+
+                <!-- UI Elements -->
+                <ResourceDictionary Source="Theme/UIElements/ActiveLabel.xaml"/>
+                <ResourceDictionary Source="Theme/UIElements/MinutesTextBox.xaml"/>
+                <ResourceDictionary Source="Theme/UIElements/RenameTaskTextBox.xaml"/>
+                <ResourceDictionary Source="Theme/UIElements/TaskNameLabel.xaml"/>
+                <ResourceDictionary Source="Theme/UIElements/TaskTextBox.xaml"/>
+                <ResourceDictionary Source="Theme/UIElements/TimeLabel.xaml"/>
+                
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

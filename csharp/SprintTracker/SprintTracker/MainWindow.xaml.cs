@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace SprintTracker
 {
@@ -69,7 +70,7 @@ namespace SprintTracker
             AddTask();
         }
 
-        private void Enter_Press(object sender, KeyEventArgs e)
+        private void Add_EnterKey(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
             {
@@ -105,7 +106,7 @@ namespace SprintTracker
 
         public void Edit_Click(object sender, RoutedEventArgs e)
         {
-            var btn = sender as Button;
+            var btn = sender as Label;
             var sp = btn.Parent as StackPanel;
             var tsk = sp.Tag as Task;
 
@@ -120,32 +121,39 @@ namespace SprintTracker
                 }
             }
 
-            sp.Children.Clear();
+            foreach (UIElement el in sp.Children)
+            {
+                el.IsEnabled = false;
+            }
+
             var task = new TextBox();
             task.Text = tsk.Name;
-            var edit = new Button();
-            edit.Content = "save";
-            edit.Tag = task;
-            edit.Click += SaveEdit_Click;
+            task.KeyDown += SaveEdit_EnterKey;
 
-            sp.Children.Add(task);
-            sp.Children.Add(edit);
+            sp.Children.RemoveAt(0);
+            sp.Children.Insert(0, task);
+            task.Focus();
+
         }
 
-        public void SaveEdit_Click(object sender, RoutedEventArgs e)
+        public void SaveEdit_EnterKey(object sender, KeyEventArgs e)
         {
-            var btn = sender as Button;
-            var sp = btn.Parent as StackPanel;
-            var tsk = sp.Tag as Task;
-
-            var tbx = btn.Tag as TextBox;
-            tsk.Name = tbx.Text;
-
-            foreach (StackPanel s in spTasklist.Children)
+            if (e.Key == Key.Return)
             {
+                var tbx = sender as TextBox;
+                var sp = tbx.Parent as StackPanel;
+                var tsk = sp.Tag as Task;
+
+                tsk.Name = tbx.Text;
+
+                foreach (StackPanel s in spTasklist.Children)
                 {
-                    s.IsEnabled = true;
-                    UIUpdateTaskRow(sp);
+                    {
+                        s.IsEnabled = true;
+                        spHeader.IsEnabled = true;
+                        Menu.IsEnabled = true;
+                        UIUpdateTaskRow(sp);
+                    }
                 }
             }
         }
@@ -175,6 +183,94 @@ namespace SprintTracker
 
             VM.StartTask(tsk);
             UIUpdateTaskRow(sp);
+        }
+
+        private void CustomStart_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            var sp = btn.Parent as StackPanel;
+            var tsk = sp.Tag as Task;
+            var minutes = btn.Tag as TextBox;
+            var min = 0;
+
+            if (minutes.Text != "")
+            {
+                min = Int32.Parse(minutes.Text);
+            }
+
+            foreach (StackPanel s in spTasklist.Children)
+            {
+                var t = s.Tag as Task;
+
+                if (t.Active)
+                {
+                    t.Stop();
+                }
+
+                UIUpdateTaskRow(s);
+            }
+
+            VM.StartTask(tsk, min);
+            UIUpdateTaskRow(sp);
+        }
+
+        private void CustomStart_EnterKey(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                var tbx = sender as TextBox;
+                var sp = tbx.Parent as StackPanel;
+                var tsk = sp.Tag as Task;
+                var min = Int32.Parse(tbx.Text);
+
+                foreach (StackPanel s in spTasklist.Children)
+                {
+                    var t = s.Tag as Task;
+
+                    if (t.Active)
+                    {
+                        t.Stop();
+                    }
+
+                    UIUpdateTaskRow(s);
+                }
+
+                VM.StartTask(tsk, min);
+                UIUpdateTaskRow(sp);
+            }
+        }
+
+        private new void PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+    private void AddTime_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            var sp = btn.Parent as StackPanel;
+            var tsk = sp.Tag as Task;
+
+            var minutes = new TextBox();
+            minutes.Width = 25;
+            minutes.Height = 20;
+            minutes.PreviewTextInput += PreviewTextInput;
+            minutes.KeyDown += CustomStart_EnterKey;
+            var lbl = new Label();
+            lbl.Content = "minutes";
+            var start = new Button();
+            start.Content = "start";
+            start.Tag = minutes;
+            start.SetResourceReference(Control.StyleProperty, "Button_Start");
+            start.Click += CustomStart_Click;
+
+            sp.Children.RemoveAt(sp.Children.Count-1);
+            sp.Children.RemoveAt(sp.Children.Count-1);
+
+            sp.Children.Add(minutes);
+            sp.Children.Add(lbl);
+            sp.Children.Add(start);
         }
 
         private void Stop_Click(object sender, RoutedEventArgs e)
@@ -244,39 +340,37 @@ namespace SprintTracker
         public void UIUpdateTaskRow(StackPanel sp)
         {
             sp.Children.Clear();
-
-            // Stackpanel
             var tsk = sp.Tag as Task;
 
             // Task
             var task = new Label();
             task.Content = tsk.Name;
-            var edit = new Button();
-            edit.Content = "e";
-            edit.Click += Edit_Click;
+            task.MouseDoubleClick += Edit_Click;
             var delete = new Button();
-            delete.Content = "x";
+            delete.SetResourceReference(Control.StyleProperty, "Button_Delete");
             delete.Click += Delete_Click;
 
             sp.Children.Add(task);
-            sp.Children.Add(edit);
-            sp.Children.Add(delete);
+            // sp.Children.Add(delete);
 
             // Inactive
             var time = new Label();
             time.Content = tsk.GetElapsedTimeString();
             time.FontWeight = FontWeights.Bold;
             var start = new Button();
-            start.Content = "start";
             start.Click += Start_Click;
+            start.SetResourceReference(Control.StyleProperty, "Button_Start");
+            var addtime = new Button();
+            addtime.SetResourceReference(Control.StyleProperty, "Button_Startplus");
+            addtime.Click += AddTime_Click;
 
             // Active
             var active = new Label();
             active.Content = "active";
             active.Foreground = new SolidColorBrush(Colors.Green);
             var stop = new Button();
-            stop.Content = "stop";
             stop.Click += Stop_Click;
+            stop.SetResourceReference(Control.StyleProperty, "Button_Stop");
 
             if (tsk.Active)
             {
@@ -287,6 +381,15 @@ namespace SprintTracker
             {
                 sp.Children.Add(time);
                 sp.Children.Add(start);
+                // sp.Children.Add(addtime);
+            }
+        }
+
+        private void EditMode_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (StackPanel sp in spTasklist.Children)
+            {
+                //
             }
         }
     }

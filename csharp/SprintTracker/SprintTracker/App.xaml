@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:SprintTracker"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="Stylesheet.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/Stylesheet.xaml"/>
+                <ResourceDictionary Source="Theme/Buttons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

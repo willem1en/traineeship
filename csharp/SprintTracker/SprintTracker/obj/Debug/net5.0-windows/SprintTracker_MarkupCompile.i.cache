@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\wille\Documents\traineeship\csharp\SprintTracker\SprintTracker\App.xaml
-2-1885418955
+3527098804
 
-9-748909780
+9-232809523
 194-214311853
-MainWindow.xaml;Stylesheet.xaml;
+MainWindow.xaml;Theme\Buttons.xaml;Theme\Stylesheet.xaml;
 
-False
+True
 

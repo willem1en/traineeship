@@ -22,5 +22,6 @@ C:\Users\wille\Documents\traineeship\csharp\SprintTracker\SprintTracker\obj\Debu
 C:\Users\wille\Documents\traineeship\csharp\SprintTracker\SprintTracker\obj\Debug\net5.0-windows\SprintTracker.genruntimeconfig.cache
 C:\Users\wille\Documents\traineeship\csharp\SprintTracker\SprintTracker\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\wille\Documents\traineeship\csharp\SprintTracker\SprintTracker\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-C:\Users\wille\Documents\traineeship\csharp\SprintTracker\SprintTracker\obj\Debug\net5.0-windows\Stylesheet.baml
 C:\Users\wille\Documents\traineeship\csharp\SprintTracker\SprintTracker\obj\Debug\net5.0-windows\App.baml
+C:\Users\wille\Documents\traineeship\csharp\SprintTracker\SprintTracker\obj\Debug\net5.0-windows\Theme\Stylesheet.baml
+C:\Users\wille\Documents\traineeship\csharp\SprintTracker\SprintTracker\obj\Debug\net5.0-windows\Theme\Buttons.baml

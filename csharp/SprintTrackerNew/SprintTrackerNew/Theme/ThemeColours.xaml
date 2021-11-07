@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Theme colours -->
+    <Color x:Key="BlackBlue">#01202e</Color>
+    <Color x:Key="DarkBlue">#0f3f54</Color>
+    <Color x:Key="MediumBlue">#32718c</Color>
+    <Color x:Key="WarmYellow">#fcc600</Color>
+    <Color x:Key="DarkRed">#a62700</Color>
+    <Color x:Key="DarkGreen">#168049</Color>
+
+</ResourceDictionary>

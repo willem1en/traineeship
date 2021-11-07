@@ -7,7 +7,49 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\button_add.png" />
+    <None Remove="Images\button_delete.png" />
+    <None Remove="Images\button_edit.png" />
+    <None Remove="Images\button_medium_add.png" />
+    <None Remove="Images\button_medium_delete.png" />
+    <None Remove="Images\button_medium_edit.png" />
+    <None Remove="Images\button_medium_save.png" />
+    <None Remove="Images\button_medium_start.png" />
+    <None Remove="Images\button_medium_startplus.png" />
+    <None Remove="Images\button_medium_stop.png" />
+    <None Remove="Images\button_small_add.png" />
+    <None Remove="Images\button_small_delete.png" />
+    <None Remove="Images\button_small_edit.png" />
+    <None Remove="Images\button_small_start.png" />
+    <None Remove="Images\button_small_stop.png" />
+    <None Remove="Images\button_start.png" />
+    <None Remove="Images\button_stop.png" />
+    <None Remove="Images\button_trans_start.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\button_add.png" />
+    <Resource Include="Images\button_delete.png" />
+    <Resource Include="Images\button_edit.png" />
+    <Resource Include="Images\button_medium_add.png" />
+    <Resource Include="Images\button_medium_delete.png" />
+    <Resource Include="Images\button_medium_edit.png" />
+    <Resource Include="Images\button_medium_save.png" />
+    <Resource Include="Images\button_medium_start.png" />
+    <Resource Include="Images\button_medium_startplus.png" />
+    <Resource Include="Images\button_medium_stop.png" />
+    <Resource Include="Images\button_small_add.png" />
+    <Resource Include="Images\button_small_delete.png" />
+    <Resource Include="Images\button_small_edit.png" />
+    <Resource Include="Images\button_small_start.png" />
+    <Resource Include="Images\button_small_stop.png" />
+    <Resource Include="Images\button_start.png" />
+    <Resource Include="Images\button_stop.png" />
+    <Resource Include="Images\button_trans_start.png" />
   </ItemGroup>
 
 </Project>
